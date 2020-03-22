@@ -295,7 +295,7 @@ class DbTransfer(object):
 
             self.append_traffic_log(offset_port, dt_transfer)
 
-            bandwidth_thistime = bandwidth_thistime + ((dt_transfer[id][0] + dt_transfer[id][1]) * self.traffic_rate)
+            bandwidth_thistime = bandwidth_thistime + (dt_transfer[offset_port][0] + dt_transfer[offset_port][1])
 
             if query_sub_in is not None:
                 query_sub_in += ",%s" % port
